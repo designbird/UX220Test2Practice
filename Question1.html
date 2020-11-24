@@ -1,0 +1,38 @@
+<head>
+    <!-- Add a phone number to the contact form that you made for assignment 4. 
+    Add twitter bootstrap to your project and format the form using twitter bootstrap form structure. -->
+
+    <!-- Get twitter bootstrap from a content delivery network -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Us:</h1>
+        <form action="http://localhost:3002/send" method="POST">
+            <!-- add a div.form-group rather than the <br />-->
+            <div class="form-group">
+                <!-- give inputs the class form-control -->
+                <label>Name: <input name="name" placeholder="name" class="form-control" /></label>
+            </div>
+            <div class="form-group">
+                <label>Email:<input name="email" placeholder="email" type="email" class="form-control" /></label>
+            </div>
+            <div class="form-group">
+                <label>Phone Number:<input name="phone" placeholder="telephone" type="tel"
+                        class="form-control" /></label>
+            </div>
+            <div class="form-group">
+                <label>Message:<textarea name="message" placeholder="type your message here"
+                        class="form-control"></textarea></label>
+            </div>
+            <button type="submit">Send Message</button>
+
+        </form>
+    </div>
+    <!-- get jQuery from a content delivery network -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- get twitter bootstrap javascript from a content delivery network -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>

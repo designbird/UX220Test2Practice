@@ -1,0 +1,47 @@
+<head>
+    <!-- Add an attribute to the phone number and email labels so that you can add a css rule to 
+        give those labels a blue background. Create blue space equal to the current font size around 
+        those labels. Create more space equal to 1/2 the current font size around the labels that isn't 
+        blue but matches the page background. -->
+
+    <!-- Get twitter bootstrap from a content delivery network -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" />
+    <style>
+        /* select a class with a . in front */
+        label.kinda_blue{
+            background: lightblue;
+            padding: 1em;
+            margin: .5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Us:</h1>
+        <form action="http://localhost:3002/send" method="POST">
+            <div class="form-group">
+                <label>Name: <input name="name" placeholder="name" class="form-control" /></label>
+            </div>
+            <div class="form-group">
+                <!-- use a class to select multiple items-->
+                <label class="kinda_blue">Email:<input name="email" placeholder="email" type="email" class="form-control" /></label>
+            </div>
+            <div class="form-group">
+                <label class="kinda_blue">Phone Number:<input name="phone" placeholder="telephone" type="tel"
+                        class="form-control" /></label>
+            </div>
+            <div class="form-group">
+                <label>Message:<textarea name="message" placeholder="type your message here"
+                        class="form-control"></textarea></label>
+            </div>
+            <button type="submit">Send Message</button>
+
+        </form>
+    </div>
+    <!-- get jQuery from a content delivery network -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- get twitter bootstrap javascript from a content delivery network -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
